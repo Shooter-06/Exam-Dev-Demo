@@ -10,7 +10,7 @@
         android:id="@+id/button"
         android:layout_width="143dp"
         android:layout_height="74dp"
-        android:text="Button"
+        android:text="Counter Frag"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.201"
@@ -22,7 +22,7 @@
         android:id="@+id/button2"
         android:layout_width="143dp"
         android:layout_height="74dp"
-        android:text="Button"
+        android:text="Images Frag"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.843"
@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.077" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/container"
         android:name="com.example.examdemo.FirstFragment"
         android:layout_width="367dp"
         android:layout_height="471dp"
