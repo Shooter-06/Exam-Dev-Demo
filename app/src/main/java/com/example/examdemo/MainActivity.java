@@ -1,6 +1,7 @@
 package com.example.examdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.widget.EditText;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     FloatingActionButton frags, activs, home;
     EditText fragments, activities;
@@ -56,9 +57,43 @@ public class MainActivity extends AppCompatActivity {
         frags.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), FragmentInterface.class);
-                startActivity(i);
+//                Intent i = new Intent(getApplicationContext(), FragmentInterface.class);
+//                startActivity(i);
+//                getSupportFragmentManager().beginTransaction().add(R.id.container,
+//                        new FragmentInterface()).commit();
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                //ft.replace(R.id.container, FragmentInterface);
+                ft.commit();
             }
         });
+
+
+        activs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent i = new Intent(getApplicationContext(), FragmentInterface.class);
+//                startActivity(i);
+                getSupportFragmentManager().beginTransaction().add(R.id.container,
+                        new FragmentInterface()).commit();
+            }
+        });
+    }
+
+//    @Override
+//    public void respond(String data) {
+//
+//    }
+//
+//    @Override
+//    public void respond2(String data) {
+//
+//    }
+
+    @Override
+    public void onClick(View view) {
+//        if(view.getId()==R.id.floatingActionButton){
+//            //getSupportFragmentManager().beginTransaction().
+//                    //replace(R.id.con).
+//        }
     }
 }
